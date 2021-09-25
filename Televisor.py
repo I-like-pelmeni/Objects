@@ -3,15 +3,16 @@ class Televisor:
     @property
     def chanel(self):
         chanel = self.chanel
-        if chanel < 5:
-            m = "прекрасно"
-        elif 5 <= chanel <= 10:
-            m = "неплохо"
-        elif 11 <= chanel <= 15:
-            m = "не сказать чтобы хорошо"
-        else:
-            m = "ужасно"
-        return m
+        if chanel > 20:
+            print("Нельзя перемистится на этот канал")
+        
+    @property
+    def voice(self):
+        voice = self.voice
+        if voice > 100:
+            print("Нельзя сделать звук громче 100")
+
+    
 
     def __init__(self, chanel, voice):
         self.chanel = chanel
