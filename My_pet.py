@@ -51,17 +51,14 @@ class Critter:
               ", и сейчас я чувствую себя", self.mood)
         self.__pass_time()
 
-    def eat(self, food = 1):
-         if self.eat = 1:
-             print("Норм так")
-
+    def eat(self, food = 4):
+        print("Мррр...  Спасибо!")
         self.hunger -= food
         if self.hunger < 0:
             self.hunger = 0
         self.__pass_time()
 
     def play(self, fun = 4):
-        print("Уиии!")
         self.boredom -= fun
         if self.boredom < 0:
             self.boredom = 0
@@ -79,8 +76,12 @@ def main():
     
         0 - Выйти
         1 - Узнать о самочувствии зверюшки
-        2 - Покормить зверюшку
-        3 - Поиграть со зверюшкой
+        2 - Покормить зверюшку(100г)
+        3 - Покормить зверюшку(150г)
+        4 - Покормить зверюшку(250г)
+        5 - Поиграть со зверюшкой(5 мин)
+        6 - Поиграть со зверюшкой(10 мин)
+        7 - Поиграть со зверюшкой(20 мин)
         """)
     
         choice = input("Ваш выбор: ")
@@ -89,6 +90,19 @@ def main():
         # выход
         if choice == "0":
             print("До свидания.")
+        elif choice == "2":
+            print("Мало")
+        elif choice == "3":
+            print("Лучше чем мало")
+        elif choice == "4":
+            print("Норм так")
+        elif choice == "5":
+            print("Давай ещё")
+        elif choice == "6":
+            print("Я хочу ещё")       
+        elif choice == "7":
+            print("Всё я наигрался")
+
 
         # беседа со зверюшкой
         elif choice == "1":
@@ -96,27 +110,21 @@ def main():
         
         # кормление зверюшки
         elif choice == "2":
-            print \
-        ("""
-        Сколько еды дать зверюшке
-
-        0 - 100г
-        1 - 150г
-        2 - 250г
-        """)
-         
-        # игра со зверюшкой
+            crit.eat
         elif choice == "3":
-            print \
-        ("""
-        Сколько времени поиграть со зверюшкой:
-        
-        1 - 5мин
-        2 - 10мин
-        3 - 20мин
-        
-        """)
+            crit.eat
+        elif choice == "4":
+            crit.eat
+
+        # игра со зверюшкой
+        elif choice == "5":
             crit.play()
+        elif choice == "6":
+            crit.play()
+        elif choice == "7":
+            crit.play()
+        
+            
 
         # непонятный пользовательский ввод
         else:
