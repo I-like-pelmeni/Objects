@@ -52,7 +52,6 @@ class Critter:
         self.__pass_time()
 
     def eat(self, food = 4):
-        print("Мррр...  Спасибо!")
         self.hunger -= food
         if self.hunger < 0:
             self.hunger = 0
@@ -97,7 +96,7 @@ def main():
         elif choice == "4":
             print("Норм так")
         elif choice == "5":
-            print("Давай ещё")
+            print("Это очень мало")
         elif choice == "6":
             print("Я хочу ещё")       
         elif choice == "7":
@@ -111,6 +110,7 @@ def main():
         # кормление зверюшки
         elif choice == "2":
             crit.eat
+            
         elif choice == "3":
             crit.eat
         elif choice == "4":
